@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# Main Controller
+#
 class MainController < ApiController
   get '/' do
     data = Faraday.get("http://ip-api.com/json/#{request.ip}")

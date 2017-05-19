@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'sinatra'
 require 'sinatra/base'
 require 'sinatra/activerecord'
@@ -20,7 +21,7 @@ class App
 
   def self.routes
     {
-      '/' => MainController,
+      '/' => MainController
     }
   end
 end
