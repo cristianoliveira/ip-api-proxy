@@ -4,10 +4,9 @@
 # If the route responds Json it should inherit from it.
 #
 class ApiController < Sinatra::Base
-  register Sinatra::CrossOrigin
-
   before do
-    cross_origin
+    response['Access-Control-Allow-Origin'] = '*'
+    response['Access-Control-Allow-Methods'] = 'GET'
     content_type :json
   end
 end
