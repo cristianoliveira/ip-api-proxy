@@ -6,6 +6,10 @@ threads threads_count, threads_count
 
 preload_app!
 
-rackup      DefaultRackup
-port        ENV['PORT']     || 5000
+rackup DefaultRackup
+ssl_bind '0.0.0.0', 443, {
+  key: 'server.key',
+  cert: 'server.crt'
+}
+
 environment ENV['RACK_ENV'] || 'development'

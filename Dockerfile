@@ -11,6 +11,10 @@ COPY . /usr/src/app
 COPY Gemfile /usr/src/app/
 COPY Gemfile.lock /usr/src/app/
 
+# Run certificate.sh
+COPY server.key /usr/src/app/
+COPY server.crt /usr/src/app/
+
 WORKDIR /usr/src/app
 RUN gem install bundler
 RUN bundle install
