@@ -12,7 +12,8 @@ require 'faraday'
 require 'uri'
 require 'net/http'
 
-Dir.glob(File.join(__dir__, 'app/controllers/*.rb')).each { |file| require file }
+require_relative 'app/controllers/base.rb'
+require_relative 'app/controllers/main.rb'
 
 # The app routes.
 #
