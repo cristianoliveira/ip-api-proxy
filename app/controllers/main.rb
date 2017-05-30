@@ -16,4 +16,8 @@ class MainController < ApiController
   get '/version' do
     { version: App::VERSION }.to_json
   end
+
+  error do
+    { error: "ip api is not answering." }
+  end
 end
