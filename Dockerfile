@@ -20,3 +20,4 @@ RUN gem install bundler
 RUN bundle install
 
 EXPOSE 443
+EXPOSE 80

@@ -3,5 +3,8 @@ web:
   command: bundle exec puma -C config/puma.rb
   volumes:
     - .:/usr/src/app
+  environment:
+    - PORT=80 # set 443 for https
   ports:
     - "443:443"
+    - "80:80"

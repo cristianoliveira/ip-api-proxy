@@ -7,7 +7,7 @@ threads threads_count, threads_count
 preload_app!
 
 rackup DefaultRackup
-ssl_bind '0.0.0.0', 443, {
+ssl_bind '0.0.0.0', ENV['PORT'], {
   key: 'server.key',
   cert: 'server.crt'
 }
